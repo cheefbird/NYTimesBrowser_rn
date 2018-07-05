@@ -1,5 +1,5 @@
 import _ from "lodash";
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import {
   StyleSheet,
   View,
@@ -13,26 +13,45 @@ import { fetchTopNews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 // import FeaturedArticle from "../components/FeaturedArticle";
 
-class TopNews extends Component {
+class TopNews extends PureComponent {
   UNSAFE_componentWillMount() {
     this.props.fetchTopNews();
   }
 
+  // getThumbnailImageUrl = ()
+
   keyExtractor = (item, index) => index.toString();
 
-  renderItem = ({ item }) => (
-    <TouchableOpacity>
-      <View style={styles.listItem}>
-        <StandardArticle
-          title={item.title}
-          subtitle={item.abstract}
-          section={item.section}
-          subsection={item.subsection}
-          imageUri="https://static01.nyt.com/images/2018/07/02/briefing/03ambriefing-asia-SS-slide-4QC4/03ambriefing-asia-SS-slide-4QC4-thumbStandard.jpg"
-        />
-      </View>
-    </TouchableOpacity>
-  );
+  renderItem = ({ item }) => {
+    const { multimedia } = item;
+    let thumbnailImageUrl;
+
+    if (multimedia.length > 0) {
+      const thumbnailObject = multimedia.find(
+        object => object.format === "Standard Thumbnail"
+      );
+      const { url } = thumbnailObject;
+
+      thumbnailImageUrl = url;
+    } else {
+      thumbnailImageUrl =
+        "https://static01.nyt.com/images/2018/07/02/briefing/03ambriefing-asia-SS-slide-4QC4/03ambriefing-asia-SS-slide-4QC4-thumbStandard.jpg";
+    }
+
+    return (
+      <TouchableOpacity>
+        <View style={styles.listItem}>
+          <StandardArticle
+            title={item.title}
+            subtitle={item.abstract}
+            section={item.section}
+            subsection={item.subsection}
+            imageUri={thumbnailImageUrl}
+          />
+        </View>
+      </TouchableOpacity>
+    );
+  };
 
   render() {
     return (
@@ -65,6 +84,8 @@ const mapStateToProps = state => {
   const topNewsArticles = _.map(state.topNewsArticles, val => {
     return { ...val };
   });
+
+  console.log(topNewsArticles);
 
   return { topNewsArticles };
 };
