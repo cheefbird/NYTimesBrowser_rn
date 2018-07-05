@@ -9,7 +9,12 @@ export default function StandardArticle({
   subsection,
   imageUri
 }) {
-  const sectionText = `${section}/${subsection}`;
+  let sectionText;
+  if (subsection === "") {
+    sectionText = section;
+  } else {
+    sectionText = `${section}/${subsection}`;
+  }
 
   return (
     <View style={styles.container}>
@@ -53,7 +58,9 @@ const styles = StyleSheet.create({
   },
   sectionText: {
     fontSize: 10,
-    fontStyle: "italic"
+    fontStyle: "italic",
+    color: "white",
+    backgroundColor: "blue"
   },
   titleText: {
     fontSize: 16,
