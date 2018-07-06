@@ -1,12 +1,6 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity
-} from "react-native";
+import { StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
@@ -84,8 +78,6 @@ const mapStateToProps = state => {
   const topNewsArticles = _.map(state.topNewsArticles, val => {
     return { ...val };
   });
-
-  console.log(topNewsArticles);
 
   return { topNewsArticles };
 };
