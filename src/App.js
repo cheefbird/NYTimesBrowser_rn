@@ -6,6 +6,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import reducers from "./reducers";
 import TopNews from "./screens/TopNews";
+import AppNavigator from "./Routes";
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class App extends React.Component {
 
     return (
       <Provider store={store}>
-        <TopNews />
+        <AppNavigator />
       </Provider>
     );
   }

@@ -8,6 +8,10 @@ import StandardArticle from "../components/StandardArticle";
 // import FeaturedArticle from "../components/FeaturedArticle";
 
 class TopNews extends PureComponent {
+  static navigationOptions = {
+    title: "Top Stories"
+  };
+
   UNSAFE_componentWillMount() {
     this.props.fetchTopNews();
   }
@@ -61,10 +65,7 @@ class TopNews extends PureComponent {
 
 const styles = StyleSheet.create({
   list: {
-    flex: 1,
-    marginTop: 60,
-    borderTopColor: "#f2f2f2",
-    borderTopWidth: 1
+    flex: 1
   },
   listItem: {
     borderBottomColor: "#f2f2f2",
