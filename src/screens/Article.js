@@ -5,7 +5,7 @@ import ArticleWebView from "../components/ArticleWebView";
 
 export default class Article extends PureComponent {
   static navigationOptions = {
-    title: this.props.getParam("title")
+    title: "Article Detail"
   };
   render() {
     return <ArticleWebView articleUrl={this.props.url} />;
