@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
 
 export default function StandardArticle({
@@ -7,6 +7,7 @@ export default function StandardArticle({
   subtitle,
   section,
   subsection,
+  onPress,
   imageUri
 }) {
   let sectionText;
@@ -17,14 +18,16 @@ export default function StandardArticle({
   }
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.thumbnail} source={{ uri: imageUri }} />
-      <View style={styles.textContainer}>
-        <Text style={styles.sectionText}>{sectionText}</Text>
-        <Text style={styles.titleText}>{title}</Text>
-        <Text>{subtitle}</Text>
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.thumbnail} source={{ uri: imageUri }} />
+        <View style={styles.textContainer}>
+          <Text style={styles.sectionText}>{sectionText}</Text>
+          <Text style={styles.titleText}>{title}</Text>
+          <Text>{subtitle}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -46,7 +49,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    borderBottomColor: "#d8d8d8",
+    borderBottomWidth: 1,
+    padding: 8
   },
   thumbnail: {
     width: 75,

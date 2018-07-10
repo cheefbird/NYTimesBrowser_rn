@@ -3,7 +3,8 @@ import { WebView, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
 export default function ArticleWebView({ articleUrl }) {
-  return <WebView style={styles.root} source={articleUrl} />;
+  const url = articleUrl;
+  return <WebView style={styles.root} source={{ uri: url }} />;
 }
 
 ArticleWebView.propTypes = {
