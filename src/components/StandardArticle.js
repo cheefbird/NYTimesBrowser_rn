@@ -36,6 +36,7 @@ StandardArticle.propTypes = {
   subtitle: PropTypes.string.isRequired,
   section: PropTypes.string,
   subsection: PropTypes.string,
+  onPress: PropTypes.func.isRequired,
   imageUri: PropTypes.string.isRequired
 };
 
@@ -63,10 +64,13 @@ const styles = StyleSheet.create({
     marginLeft: 10
   },
   sectionText: {
-    fontSize: 10,
+    fontSize: 11,
     fontStyle: "italic",
+    fontWeight: "bold",
     color: "white",
-    backgroundColor: "blue"
+    backgroundColor: "blue",
+    alignSelf: "flex-start",
+    paddingHorizontal: 2
   },
   titleText: {
     fontSize: 16,
