@@ -13,6 +13,13 @@ export default createStackNavigator(
     }
   },
   {
-    initialRouteName: "TopStories"
+    initialRouteName: "TopStories",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#fcfcfc"
+      },
+      headerTintColor: "black",
+      headerBackTitle: "Back"
+    }
   }
 );
