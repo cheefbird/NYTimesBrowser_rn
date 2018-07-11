@@ -4,7 +4,7 @@ import { StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
-// import StandardArticle from "../components/StandardArticle";
+import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
 
 class TopNews extends PureComponent {
@@ -47,7 +47,7 @@ class TopNews extends PureComponent {
 
   keyExtractor = (item, index) => index.toString();
 
-  renderItem = ({ item }) => {
+  renderItem = ({ item, index }) => {
     const { multimedia } = item;
 
     const imageObject = this.createImageObject(multimedia);
@@ -55,8 +55,24 @@ class TopNews extends PureComponent {
     const sectionText = this.createSectionText(item.section, item.subsection);
     const { navigation } = this.props;
 
+    if (index == 0) {
+      return (
+        <FeaturedArticle
+          title={item.title}
+          subtitle={item.abstract}
+          sectionText={sectionText}
+          imageUri={imageObject.large}
+          onPress={() =>
+            navigation.push("Detail", {
+              url: item.url
+            })
+          }
+        />
+      );
+    }
+
     return (
-      <FeaturedArticle
+      <StandardArticle
         title={item.title}
         subtitle={item.abstract}
         sectionText={sectionText}
