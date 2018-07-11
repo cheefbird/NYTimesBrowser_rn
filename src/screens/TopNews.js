@@ -17,10 +17,14 @@ class TopNews extends PureComponent {
   }
 
   createSectionText = (section, subsection) => {
+    if (section === "U.S.") {
+      section = "USA";
+    }
+
     if (subsection === "") {
       return section;
     } else {
-      return `${section}/${subsection}`;
+      return `${section}: ${subsection}`;
     }
   };
 
@@ -79,7 +83,8 @@ class TopNews extends PureComponent {
         imageUri={imageObject.large}
         onPress={() =>
           navigation.push("Detail", {
-            url: item.url
+            url: item.url,
+            title: sectionText
           })
         }
       />
