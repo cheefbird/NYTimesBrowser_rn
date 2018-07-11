@@ -4,11 +4,15 @@ import { StyleSheet } from "react-native";
 import ArticleWebView from "../components/ArticleWebView";
 
 export default class Article extends PureComponent {
-  static navigationOptions = {
-    title: "Article Detail"
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam("title")
+    };
   };
   render() {
-    const url = this.props.navigation.getParam("url");
+    const { navigation } = this.props;
+    const url = navigation.getParam("url");
+
     return <ArticleWebView articleUrl={url} />;
   }
 }
