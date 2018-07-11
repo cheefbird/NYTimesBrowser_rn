@@ -26,15 +26,9 @@ export default function StandardArticle({
 StandardArticle.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  section: PropTypes.string,
-  subsection: PropTypes.string,
+  sectionText: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   imageUri: PropTypes.string.isRequired
-};
-
-StandardArticle.defaultProps = {
-  section: "",
-  subsection: ""
 };
 
 const styles = StyleSheet.create({
