@@ -16,6 +16,14 @@ class TopNews extends PureComponent {
     this.props.fetchTopNews();
   }
 
+  createSectionText = (section, subsection) => {
+    if (subsection === "") {
+      return section;
+    } else {
+      return `${section}/${subsection}`;
+    }
+  };
+
   keyExtractor = (item, index) => index.toString();
 
   renderItem = ({ item }) => {
@@ -34,14 +42,14 @@ class TopNews extends PureComponent {
         "https://static01.nyt.com/images/2018/07/02/briefing/03ambriefing-asia-SS-slide-4QC4/03ambriefing-asia-SS-slide-4QC4-thumbStandard.jpg";
     }
 
+    const sectionText = this.createSectionText(item.section, item.subsection);
     const { navigation } = this.props;
 
     return (
       <StandardArticle
         title={item.title}
         subtitle={item.abstract}
-        section={item.section}
-        subsection={item.subsection}
+        sectionText={sectionText}
         imageUri={thumbnailImageUrl}
         onPress={() =>
           navigation.push("Detail", {

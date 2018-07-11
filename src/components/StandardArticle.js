@@ -5,18 +5,10 @@ import PropTypes from "prop-types";
 export default function StandardArticle({
   title,
   subtitle,
-  section,
-  subsection,
+  sectionText,
   onPress,
   imageUri
 }) {
-  let sectionText;
-  if (subsection === "") {
-    sectionText = section;
-  } else {
-    sectionText = `${section}/${subsection}`;
-  }
-
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
