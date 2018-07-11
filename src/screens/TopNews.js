@@ -16,8 +16,6 @@ class TopNews extends PureComponent {
     this.props.fetchTopNews();
   }
 
-  // getThumbnailImageUrl = ()
-
   keyExtractor = (item, index) => index.toString();
 
   renderItem = ({ item }) => {
@@ -36,18 +34,21 @@ class TopNews extends PureComponent {
         "https://static01.nyt.com/images/2018/07/02/briefing/03ambriefing-asia-SS-slide-4QC4/03ambriefing-asia-SS-slide-4QC4-thumbStandard.jpg";
     }
 
+    const { navigation } = this.props;
+
     return (
-      <TouchableOpacity>
-        <View style={styles.listItem}>
-          <StandardArticle
-            title={item.title}
-            subtitle={item.abstract}
-            section={item.section}
-            subsection={item.subsection}
-            imageUri={thumbnailImageUrl}
-          />
-        </View>
-      </TouchableOpacity>
+      <StandardArticle
+        title={item.title}
+        subtitle={item.abstract}
+        section={item.section}
+        subsection={item.subsection}
+        imageUri={thumbnailImageUrl}
+        onPress={() =>
+          navigation.push("Detail", {
+            url: item.url
+          })
+        }
+      />
     );
   };
 
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   listItem: {
-    borderBottomColor: "#f2f2f2",
+    borderBottomColor: "#fcfcfc",
     borderBottomWidth: 1,
     flex: 1,
     padding: 8

@@ -8,7 +8,8 @@ export default class Article extends PureComponent {
     title: "Article Detail"
   };
   render() {
-    return <ArticleWebView articleUrl={this.props.url} />;
+    const url = this.props.navigation.getParam("url");
+    return <ArticleWebView articleUrl={url} />;
   }
 }
 
