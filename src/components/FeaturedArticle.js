@@ -1,57 +1,43 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
 
-export default function StandardArticle(
-  {
-    //   title,
-    //   subtitle,
-    //   section,
-    //   subsection,
-    //   imageUri
-  }
-) {
+export default function StandardArticle({
+  title,
+  subtitle,
+  sectionText,
+  onPress,
+  imageUri
+}) {
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{
-          uri:
-            "https://static01.nyt.com/images/2018/07/03/us/politics/03dc-scotus/03dc-scotus-superJumbo.jpg"
-        }}
-      />
-      <View style={styles.textContainer}>
-        <Text style={styles.sectionText}>Subsection Text</Text>
-        <Text style={styles.titleText}>
-          Title Text will Go Here and It Just Might be Long
-        </Text>
-        <Text>
-          This will be a subtitle, or abstract, which gives brief info. This
-          will be a subtitle, or abstract, which gives brief info. This will be
-          a subtitle, or abstract, which gives brief info.
-        </Text>
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={{ uri: imageUri }} />
+        <View style={styles.textContainer}>
+          <Text style={styles.sectionText}>{sectionText}</Text>
+          <Text style={styles.titleText}>{title}</Text>
+          <Text>{subtitle}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
-// StandardArticle.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   subtitle: PropTypes.string.isRequired,
-//   section: PropTypes.string,
-//   subsection: PropTypes.string,
-//   imageUri: PropTypes.string.isRequired
-// };
-
-// StandardArticle.defaultProps = {
-//   section: "",
-//   subsection: ""
-// };
+StandardArticle.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  sectionText: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+  imageUri: PropTypes.string.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    borderBottomColor: "#d8d8d8",
+    borderBottomWidth: 1,
+    padding: 8
   },
   image: {
     width: 365,
@@ -61,8 +47,14 @@ const styles = StyleSheet.create({
     flex: 1
   },
   sectionText: {
-    fontSize: 10,
+    fontSize: 12,
     fontStyle: "italic",
+    fontWeight: "bold",
+    color: "#fff",
+    backgroundColor: "#000",
+    alignSelf: "flex-start",
+    paddingHorizontal: 5,
+    paddingVertical: 4,
     marginTop: 8
   },
   titleText: {
