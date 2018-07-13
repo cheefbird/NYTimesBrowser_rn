@@ -50,13 +50,14 @@ const styles = StyleSheet.create({
     marginLeft: 10
   },
   sectionText: {
-    fontSize: 11,
+    fontSize: 12,
     fontStyle: "italic",
     fontWeight: "bold",
-    color: "white",
-    backgroundColor: "blue",
+    color: "#fff",
+    backgroundColor: "#000",
     alignSelf: "flex-start",
-    paddingHorizontal: 2
+    paddingHorizontal: 5,
+    paddingVertical: 4
   },
   titleText: {
     fontSize: 16,

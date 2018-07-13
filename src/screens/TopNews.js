@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import { StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
@@ -105,7 +105,8 @@ class TopNews extends PureComponent {
 
 const styles = StyleSheet.create({
   list: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#fff"
   },
   listItem: {
     borderBottomColor: "#fcfcfc",

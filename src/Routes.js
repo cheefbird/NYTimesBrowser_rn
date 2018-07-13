@@ -16,7 +16,7 @@ export default createStackNavigator(
     initialRouteName: "TopStories",
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#fcfcfc"
+        backgroundColor: "#fff"
       },
       headerTintColor: "black",
       headerBackTitle: "Back"
