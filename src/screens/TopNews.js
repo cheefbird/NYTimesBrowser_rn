@@ -3,7 +3,7 @@ import React, { PureComponent } from "react";
 import { StyleSheet, FlatList } from "react-native";
 import { connect } from "react-redux";
 
-import { fetchTopNews } from "../actions";
+import { fetchTopNews, setNewsCategory } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
 import CategoryPicker from "../components/CategoryPicker";
@@ -14,8 +14,13 @@ class TopNews extends PureComponent {
   };
 
   UNSAFE_componentWillMount() {
-    this.props.fetchTopNews("home");
+    this.props.fetchTopNews(this.props.selectedCategory);
   }
+
+  setCategoryName = categoryName => {
+    this.props.setNewsCategory(categoryName);
+    this.props.fetchTopNews(this.props.selectedCategory);
+  };
 
   createSectionText = (section, subsection) => {
     if (section === "U.S.") {
@@ -93,6 +98,7 @@ class TopNews extends PureComponent {
   };
 
   render() {
+    console.log(this.props);
     return (
       <FlatList
         data={this.props.topNewsArticles}
@@ -118,14 +124,16 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-  const topNewsArticles = _.map(state.topNewsArticles, val => {
+  const topNewsArticles = _.map(state.topNews.articles, val => {
     return { ...val };
   });
 
-  return { topNewsArticles };
+  const selectedCategory = state.topNews.selectedCategory;
+
+  return { topNewsArticles, selectedCategory };
 };
 
 export default connect(
   mapStateToProps,
-  { fetchTopNews }
+  { fetchTopNews, setNewsCategory }
 )(TopNews);
