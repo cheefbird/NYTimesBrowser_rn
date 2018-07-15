@@ -14,7 +14,7 @@ class TopNews extends PureComponent {
   };
 
   UNSAFE_componentWillMount() {
-    this.props.fetchTopNews();
+    this.props.fetchTopNews("home");
   }
 
   createSectionText = (section, subsection) => {
