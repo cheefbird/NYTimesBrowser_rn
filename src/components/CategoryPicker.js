@@ -16,7 +16,7 @@ export default class CategoryPicker extends Component {
           <MaterialIcons name="arrow-drop-down" size={24} style={styles.icon} />
         }
       >
-        <Picker.Item label="Top Stories" value="topStories" />
+        <Picker.Item label="All Top Stories" value="home" />
         <Picker.Item label="Politics" value="politics" />
       </Picker>
     );
