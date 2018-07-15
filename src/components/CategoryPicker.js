@@ -11,7 +11,7 @@ export default class CategoryPicker extends Component {
         mode="dropdown"
         style={styles.picker}
         textStyle={styles.text}
-        selectedValue="topStories"
+        selectedValue="home"
         iosIcon={
           <MaterialIcons name="arrow-drop-down" size={24} style={styles.icon} />
         }
@@ -25,8 +25,7 @@ export default class CategoryPicker extends Component {
 
 const styles = StyleSheet.create({
   picker: {
-    width: undefined,
-    height: 50
+    width: undefined
   },
   text: {
     fontWeight: "bold"
