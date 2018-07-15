@@ -1,4 +1,4 @@
-import { FETCH_TOP_NEWS } from "./types";
+import { FETCH_TOP_NEWS, SET_NEWS_CATEGORY } from "./types";
 import { API_KEY } from "../../config/API";
 
 const requestUrl = categoryName =>
@@ -18,5 +18,12 @@ export const fetchTopNews = categoryName => {
           payload: results
         });
       });
+  };
+};
+
+export const setNewsCategory = selectedCategory => {
+  return {
+    type: SET_NEWS_CATEGORY,
+    payload: selectedCategory
   };
 };
