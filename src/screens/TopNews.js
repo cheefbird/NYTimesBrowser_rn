@@ -6,10 +6,11 @@ import { connect } from "react-redux";
 import { fetchTopNews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
+import CategoryPicker from "../components/CategoryPicker";
 
 class TopNews extends PureComponent {
   static navigationOptions = {
-    title: "Top Stories"
+    headerTitle: () => <CategoryPicker />
   };
 
   UNSAFE_componentWillMount() {
