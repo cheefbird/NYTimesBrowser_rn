@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { fetchTopNews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 
 class TopNews extends PureComponent {
   static navigationOptions = {
@@ -91,6 +92,10 @@ class TopNews extends PureComponent {
     );
   };
 
+  renderCategoryPickerHeader = () => (
+    <CategoryPickerItem selectedCategory="home" />
+  );
+
   render() {
     return (
       <FlatList
@@ -98,6 +103,7 @@ class TopNews extends PureComponent {
         keyExtractor={this.keyExtractor}
         renderItem={this.renderItem}
         style={styles.list}
+        ListHeaderComponent={this.renderCategoryPickerHeader}
       />
     );
   }
