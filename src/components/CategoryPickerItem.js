@@ -17,7 +17,7 @@ export default class CategoryPickerItem extends Component {
         style={styles.picker}
         textStyle={styles.pickerLabel}
       >
-        <Picker.Item label="All Top News" value="home" />
+        <Picker.Item label="All Top Stories" value="home" />
         <Picker.Item label="Politics" value="politics" />
       </Picker>
     );

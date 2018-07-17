@@ -10,7 +10,7 @@ import CategoryPickerItem from "../components/CategoryPickerItem";
 
 class TopNews extends PureComponent {
   static navigationOptions = {
-    title: "Top Stories"
+    title: "Top News"
   };
 
   UNSAFE_componentWillMount() {
