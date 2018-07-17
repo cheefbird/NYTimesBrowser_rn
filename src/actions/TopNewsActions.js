@@ -13,9 +13,14 @@ export const fetchTopNews = (categoryName = "home") => {
       .then(json => {
         const { results } = json;
 
+        const data = {
+          articles: results,
+          category: categoryName
+        };
+
         dispatch({
           type: FETCH_TOP_NEWS,
-          payload: results
+          payload: data
         });
       });
   };

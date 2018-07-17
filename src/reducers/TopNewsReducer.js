@@ -1,6 +1,9 @@
 import { FETCH_TOP_NEWS } from "../actions/types";
 
-const INITIAL_STATE = {};
+const INITIAL_STATE = {
+  articles: [],
+  category: "home"
+};
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {

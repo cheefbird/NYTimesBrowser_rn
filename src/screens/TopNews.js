@@ -138,11 +138,13 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-  const topNewsArticles = _.map(state.topNewsArticles, val => {
+  const topNewsArticles = _.map(state.topNewsArticles.articles, val => {
     return { ...val };
   });
 
-  return { topNewsArticles };
+  const selectedCategory = state.category;
+
+  return { topNewsArticles, selectedCategory };
 };
 
 export default connect(
