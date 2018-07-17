@@ -19,7 +19,16 @@ export default class CategoryPickerItem extends Component {
         textStyle={styles.pickerLabel}
       >
         <Picker.Item label="All Top Stories" value="home" />
+        <Picker.Item label="World" value="world" />
+        <Picker.Item label="National" value="national" />
         <Picker.Item label="Politics" value="politics" />
+        <Picker.Item label="Opinion" value="opinion" />
+        <Picker.Item label="Technology" value="technology" />
+        <Picker.Item label="Business" value="business" />
+        <Picker.Item label="Science" value="science" />
+        <Picker.Item label="Health" value="health" />
+        <Picker.Item label="Sports" value="sports" />
+        <Picker.Item label="Movies" value="movies" />
       </Picker>
     );
   }
