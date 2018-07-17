@@ -7,12 +7,33 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 export default class CategoryPickerItem extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Picker selectedValue={this.props.selectedCategory}>
-          <Picker.Item label="All Top News" value="home" />
-          <Picker.Item label="Politics" value="politics" />
-        </Picker>
-      </View>
+      <Picker
+        mode="dropdown"
+        selectedValue={this.props.selectedCategory}
+        iosIcon={
+          <MaterialIcons name="arrow-drop-down" size={24} style={styles.icon} />
+        }
+        iosHeader="Choose a Category"
+        style={styles.picker}
+        textStyle={styles.pickerLabel}
+      >
+        <Picker.Item label="All Top News" value="home" />
+        <Picker.Item label="Politics" value="politics" />
+      </Picker>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  picker: {
+    width: undefined,
+    alignItems: "center"
+  },
+  pickerLabel: {
+    fontWeight: "bold",
+    alignSelf: "center"
+  },
+  icon: {
+    marginLeft: -17
+  }
+});
