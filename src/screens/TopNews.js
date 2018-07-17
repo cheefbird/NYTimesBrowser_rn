@@ -95,7 +95,7 @@ class TopNews extends PureComponent {
   renderCategoryPickerHeader = () => (
     <View style={styles.pickerContainer}>
       <CategoryPickerItem
-        selectedCategory="home"
+        selectedCategory={this.props.selectedCategory}
         onValueChanged={this.handleCategoryChanged}
       />
     </View>
@@ -138,11 +138,12 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-  const topNewsArticles = _.map(state.topNewsArticles.articles, val => {
+  const { articles, category } = state.topNewsArticles;
+  const topNewsArticles = _.map(articles, val => {
     return { ...val };
   });
 
-  const selectedCategory = state.category;
+  const selectedCategory = category;
 
   return { topNewsArticles, selectedCategory };
 };
