@@ -94,9 +94,16 @@ class TopNews extends PureComponent {
 
   renderCategoryPickerHeader = () => (
     <View style={styles.pickerContainer}>
-      <CategoryPickerItem selectedCategory="home" />
+      <CategoryPickerItem
+        selectedCategory="home"
+        onValueChanged={this.handleCategoryChanged}
+      />
     </View>
   );
+
+  handleCategoryChanged = value => {
+    this.props.fetchTopNews(value);
+  };
 
   render() {
     return (
