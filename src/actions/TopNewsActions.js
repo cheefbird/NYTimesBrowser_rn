@@ -1,11 +1,14 @@
 import { FETCH_TOP_NEWS } from "./types";
 import { API_KEY } from "../../config/API";
 
-const path = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+const path = categoryName =>
+  `https://api.nytimes.com/svc/topstories/v2/${categoryName}.json?api-key=${API_KEY}`;
 
-export const fetchTopNews = () => {
+export const fetchTopNews = (categoryName = "home") => {
+  const requestUrl = path(categoryName);
+
   return dispatch => {
-    fetch(path)
+    fetch(requestUrl)
       .then(response => response.json())
       .then(json => {
         const { results } = json;
