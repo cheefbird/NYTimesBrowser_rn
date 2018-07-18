@@ -1,9 +1,10 @@
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator, createTabNavigator } from "react-navigation";
 
 import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
+import MovieReviews from "./screens/MovieReviews";
 
-export default createStackNavigator(
+const TopNewsStack = createStackNavigator(
   {
     TopStories: {
       screen: TopNews
@@ -23,3 +24,29 @@ export default createStackNavigator(
     }
   }
 );
+
+const MovieReviewsStack = createStackNavigator(
+  {
+    ReviewList: {
+      screen: MovieReviews
+    },
+    Detail: {
+      screen: Article
+    }
+  },
+  {
+    initialRouteName: "ReviewList",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#fff"
+      },
+      headerTintColor: "black",
+      headerBackTitle: "Back"
+    }
+  }
+);
+
+export default createTabNavigator({
+  TopNewsStack,
+  MovieReviewsStack
+});
