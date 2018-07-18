@@ -13,7 +13,7 @@ export default class CategoryPickerItem extends Component {
         iosIcon={
           <MaterialIcons name="arrow-drop-down" size={24} style={styles.icon} />
         }
-        iosHeader="Choose a Category"
+        iosHeader="Categories"
         onValueChange={this.props.onValueChanged}
         style={styles.picker}
         textStyle={styles.pickerLabel}

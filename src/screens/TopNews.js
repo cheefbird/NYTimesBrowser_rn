@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import { StyleSheet, FlatList, View } from "react-native";
+import { StyleSheet, FlatList, View, Text } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
@@ -94,6 +94,7 @@ class TopNews extends PureComponent {
 
   renderCategoryPickerHeader = () => (
     <View style={styles.pickerContainer}>
+      <Text style={styles.categoryPickerLabel}>Category: </Text>
       <CategoryPickerItem
         selectedCategory={this.props.selectedCategory}
         onValueChanged={this.handleCategoryChanged}
@@ -131,9 +132,15 @@ const styles = StyleSheet.create({
   },
   pickerContainer: {
     flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
     borderBottomColor: "#d8d8d8",
     borderBottomWidth: 1
+  },
+  categoryPickerLabel: {
+    fontSize: 11,
+    marginRight: -15
   }
 });
 
