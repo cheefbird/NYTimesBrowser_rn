@@ -8,6 +8,10 @@ import { fetchMovieReviews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 
 class MovieReviews extends PureComponent {
+  static navigationOptions = {
+    title: "Movie Reviews"
+  };
+
   componentDidMount() {
     this.props.fetchMovieReviews();
   }
