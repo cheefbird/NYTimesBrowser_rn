@@ -1,13 +1,10 @@
-import { FETCH_TOP_NEWS } from "../actions/types";
+import { FETCH_MOVIE_REVIEWS } from "../actions/types";
 
-const INITIAL_STATE = {
-  articles: [],
-  category: "home"
-};
+const INITIAL_STATE = {};
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FETCH_TOP_NEWS:
+    case FETCH_MOVIE_REVIEWS:
       return action.payload;
 
     default:

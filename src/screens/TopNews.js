@@ -1,15 +1,16 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import { StyleSheet, FlatList } from "react-native";
+import { StyleSheet, StatusBar, FlatList, View, Text } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 
 class TopNews extends PureComponent {
   static navigationOptions = {
-    title: "Top Stories"
+    title: "Top News"
   };
 
   UNSAFE_componentWillMount() {
@@ -91,20 +92,37 @@ class TopNews extends PureComponent {
     );
   };
 
+  renderCategoryPickerHeader = () => (
+    <View style={styles.pickerContainer}>
+      <Text style={styles.categoryPickerLabel}>Category: </Text>
+      <CategoryPickerItem
+        selectedCategory={this.props.selectedCategory}
+        onValueChanged={this.handleCategoryChanged}
+      />
+    </View>
+  );
+
+  handleCategoryChanged = value => {
+    this.props.fetchTopNews(value);
+  };
+
   render() {
     return (
-      <FlatList
-        data={this.props.topNewsArticles}
-        keyExtractor={this.keyExtractor}
-        renderItem={this.renderItem}
-        style={styles.list}
-      />
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor="#000" />
+        <FlatList
+          data={this.props.topNewsArticles}
+          keyExtractor={this.keyExtractor}
+          renderItem={this.renderItem}
+          ListHeaderComponent={this.renderCategoryPickerHeader}
+        />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  list: {
+  container: {
     flex: 1,
     backgroundColor: "#fff"
   },
@@ -113,15 +131,30 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     flex: 1,
     padding: 8
+  },
+  pickerContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    borderBottomColor: "#d8d8d8",
+    borderBottomWidth: 1
+  },
+  categoryPickerLabel: {
+    fontSize: 11,
+    marginRight: -15
   }
 });
 
 const mapStateToProps = state => {
-  const topNewsArticles = _.map(state.topNewsArticles, val => {
+  const { articles, category } = state.topNewsArticles;
+  const topNewsArticles = _.map(articles, val => {
     return { ...val };
   });
 
-  return { topNewsArticles };
+  const selectedCategory = category;
+
+  return { topNewsArticles, selectedCategory };
 };
 
 export default connect(
