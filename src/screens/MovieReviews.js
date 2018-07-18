@@ -1,21 +1,34 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import { StyleSheet, FlatList, View } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { fetchMovieReviews } from "../actions";
 
 class MovieReviews extends PureComponent {
+  componentDidMount() {
+    this.props.fetchMovieReviews();
+  }
+
+  keyExtractor = item => item.link.url;
+
   render() {
-    return <View style={styles.container} />;
+    return (
+      <FlatList
+        data={this.props.reviews}
+        keyExtractor={this.keyExtractor}
+        renderItem={this.renderItem}
+        style={styles.list}
+      />
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  list: {
     flex: 1,
-    backgroundColor: "red"
+    backgroundColor: "#fff"
   }
 });
 
