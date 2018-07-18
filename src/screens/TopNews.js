@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
-import { StyleSheet, FlatList, View, Text } from "react-native";
+import { StyleSheet, StatusBar, FlatList, View, Text } from "react-native";
 import { connect } from "react-redux";
 
 import { fetchTopNews } from "../actions";
@@ -108,19 +108,21 @@ class TopNews extends PureComponent {
 
   render() {
     return (
-      <FlatList
-        data={this.props.topNewsArticles}
-        keyExtractor={this.keyExtractor}
-        renderItem={this.renderItem}
-        style={styles.list}
-        ListHeaderComponent={this.renderCategoryPickerHeader}
-      />
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor="#000" />
+        <FlatList
+          data={this.props.topNewsArticles}
+          keyExtractor={this.keyExtractor}
+          renderItem={this.renderItem}
+          ListHeaderComponent={this.renderCategoryPickerHeader}
+        />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  list: {
+  container: {
     flex: 1,
     backgroundColor: "#fff"
   },
