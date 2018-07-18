@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { fetchMovieReviews } from "../actions";
+import StandardArticle from "../components/StandardArticle";
 
 class MovieReviews extends PureComponent {
   componentDidMount() {
@@ -12,6 +13,33 @@ class MovieReviews extends PureComponent {
   }
 
   keyExtractor = item => item.link.url;
+
+  renderItem = ({ item }) => {
+    const {
+      display_title,
+      mpaa_rating,
+      headline,
+      summary_short,
+      multimedia,
+      link
+    } = item;
+
+    const labelText = `${display_title} - Rated ${mpaa_rating}`;
+
+    return (
+      <StandardArticle
+        title={headline}
+        subtitle={summary_short}
+        sectionText={labelText}
+        imageUri={multimedia.src}
+        onPress={() =>
+          navigation.push("Detail", {
+            url: link.url
+          })
+        }
+      />
+    );
+  };
 
   render() {
     return (
