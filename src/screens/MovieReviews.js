@@ -19,6 +19,7 @@ class MovieReviews extends PureComponent {
   keyExtractor = item => item.link.url;
 
   renderItem = ({ item }) => {
+    const { navigation } = this.props;
     const {
       display_title,
       mpaa_rating,
@@ -30,6 +31,8 @@ class MovieReviews extends PureComponent {
 
     const labelText = `${display_title} - Rated ${mpaa_rating}`;
 
+    const url = link.url.replace(/http/i, "https");
+
     return (
       <StandardArticle
         title={headline}
@@ -38,7 +41,7 @@ class MovieReviews extends PureComponent {
         imageUri={multimedia.src}
         onPress={() =>
           navigation.push("Detail", {
-            url: link.url
+            url: url
           })
         }
       />
