@@ -6,7 +6,7 @@ import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
 
-const TopNewsStack = createStackNavigator(
+const TopNewsTab = createStackNavigator(
   {
     TopStories: {
       screen: TopNews
@@ -19,24 +19,15 @@ const TopNewsStack = createStackNavigator(
     initialRouteName: "TopStories",
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#fff"
+        backgroundColor: "#000"
       },
-      headerTintColor: "black",
-      headerBackTitle: "Back",
-      tabBarIcon: ({ focused, tintColor }) => {
-        let iconName;
-
-        iconName = focused ? "newspaper" : "newspaper-outline";
-
-        return (
-          <MaterialCommunityIcons name={iconName} size={25} color={tintColor} />
-        );
-      }
+      headerTintColor: "#fff",
+      headerBackTitle: "Back"
     }
   }
 );
 
-const MovieReviewsStack = createStackNavigator(
+const MovieReviewsTab = createStackNavigator(
   {
     ReviewList: {
       screen: MovieReviews
@@ -49,32 +40,51 @@ const MovieReviewsStack = createStackNavigator(
     initialRouteName: "ReviewList",
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#fff"
+        backgroundColor: "#000"
       },
-      headerTintColor: "black",
-      headerBackTitle: "Back",
-      tabBarIcon: ({ focused, tintColor }) => {
-        let iconName;
-
-        iconName = focused ? "movie-roll" : "movie-roll-outline";
-
-        return (
-          <MaterialCommunityIcons name={iconName} size={25} color={tintColor} />
-        );
-      }
+      headerTintColor: "#fff",
+      headerBackTitle: "Back"
     }
   }
 );
 
 export default createTabNavigator(
   {
-    TopNewsStack,
-    MovieReviewsStack
+    TopNewsTab: {
+      screen: TopNewsTab,
+      navigationOptions: {
+        tabBarLabel: "Top News",
+        tabBarIcon: ({ tintColor }) => (
+          <MaterialCommunityIcons
+            name="newspaper"
+            size={25}
+            color={tintColor}
+          />
+        )
+      }
+    },
+    MovieReviewsTab: {
+      screen: MovieReviewsTab,
+      navigationOptions: {
+        tabBarLabel: "Movie Reviews",
+        tabBarIcon: ({ tintColor }) => (
+          <MaterialCommunityIcons
+            name="movie-roll"
+            size={25}
+            color={tintColor}
+          />
+        )
+      }
+    }
   },
   {
+    initialRouteName: "TopNewsTab",
     tabBarOptions: {
-      activeTintColor: "orange",
-      inactiveTintColor: "black"
+      activeTintColor: "#db8113",
+      inactiveTintColor: "#fff",
+      style: {
+        backgroundColor: "#000"
+      }
     }
   }
 );
