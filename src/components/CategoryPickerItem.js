@@ -34,6 +34,11 @@ export default class CategoryPickerItem extends Component {
   }
 }
 
+CategoryPickerItem.propTypes = {
+  selectedCategory: PropTypes.string.isRequired,
+  onValueChanged: PropTypes.func.isRequired
+};
+
 const styles = StyleSheet.create({
   picker: {
     width: undefined,
