@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { fetchMovieReviews } from "../actions";
-import StandardArticle from "../components/StandardArticle";
+// import StandardArticle from "../components/StandardArticle";
+import MovieReview from "../components/MovieReview";
 
 class MovieReviews extends PureComponent {
   static navigationOptions = {
@@ -19,6 +20,7 @@ class MovieReviews extends PureComponent {
   keyExtractor = item => item.link.url;
 
   renderItem = ({ item }) => {
+    const { navigation } = this.props;
     const {
       display_title,
       mpaa_rating,
@@ -28,22 +30,34 @@ class MovieReviews extends PureComponent {
       link
     } = item;
 
-    const labelText = `${display_title} - Rated ${mpaa_rating}`;
+    const labelTitle = `${display_title} - `;
+    const rating = this.createRatingText(mpaa_rating);
+
+    const url = link.url.replace(/http/i, "https");
 
     return (
-      <StandardArticle
+      <MovieReview
         title={headline}
         subtitle={summary_short}
-        sectionText={labelText}
+        labelTitle={labelTitle}
+        labelRating={rating}
         imageUri={multimedia.src}
         onPress={() =>
           navigation.push("Detail", {
-            url: link.url
+            url: url
           })
         }
       />
     );
   };
+
+  createRatingText(rating) {
+    if (rating === "" || rating === "Not Rated") {
+      return "Not Yet Rated";
+    } else {
+      return `Rated ${rating}`;
+    }
+  }
 
   render() {
     return (
