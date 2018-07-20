@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		428A6D50F8C7C23AFBB2F10FA662DA76 /* Pods-NYTimesBrowserTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A6485C4E088DAB1D463579DFDEA1BD /* Pods-NYTimesBrowserTests-dummy.m */; };
+		93EDBF41FCB1AF2BDDC6F884E5D21ECE /* Pods-NYTimesBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF483A7B7AFA1258638BCD3CE0CCF18 /* Pods-NYTimesBrowser-dummy.m */; };
+		9E2DE65564EBF887E5D2BDA270E18C83 /* Pods-NYTimesBrowser-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ADF544EAD591E1DE30D8E26769A1D7 /* Pods-NYTimesBrowser-tvOSTests-dummy.m */; };
+		B650C12A41587E9A204F3A5965CB8BA5 /* Pods-NYTimesBrowser-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 943E28460154137D4CF27C96F284F67A /* Pods-NYTimesBrowser-tvOS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		580EC6C6EF5D825755CC6B0FB4755A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F7DF2BFC87AC37A3C5DB8970F7781F0;
+			remoteInfo = "Pods-NYTimesBrowser-tvOS";
+		};
+		5CA43441D513717D68C7EE042D253576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 936D2AE9027FB3687D53B27968538128;
+			remoteInfo = "Pods-NYTimesBrowser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E5601736D99A79875148105C41A71E /* Pods-NYTimesBrowser-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYTimesBrowser-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0777C102FCA5518B571FEE648D457CBD /* Pods-NYTimesBrowser-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-frameworks.sh"; sourceTree = "<group>"; };
+		0EF483A7B7AFA1258638BCD3CE0CCF18 /* Pods-NYTimesBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYTimesBrowser-dummy.m"; sourceTree = "<group>"; };
+		18F08888EE5A37A6A88D9699E0621A3F /* Pods-NYTimesBrowserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowserTests.release.xcconfig"; sourceTree = "<group>"; };
+		1BD43201BD3E57091418A0F0C55DD71D /* Pods-NYTimesBrowser-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		1DCA78DC12FB6D579B7858B80A07C0C5 /* libPods-NYTimesBrowserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYTimesBrowserTests.a"; path = "libPods-NYTimesBrowserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
+		28A6485C4E088DAB1D463579DFDEA1BD /* Pods-NYTimesBrowserTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYTimesBrowserTests-dummy.m"; sourceTree = "<group>"; };
+		2E280B58529AEBA76B5F11C0705D0856 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterReactNativeShared.framework; path = AppCenterReactNativeShared/AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
+		301EF6E373B8E90E5B55CB3652DCFC76 /* libPods-NYTimesBrowser-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYTimesBrowser-tvOS.a"; path = "libPods-NYTimesBrowser-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36B2606FF9D9C7086D544405519650F3 /* Pods-NYTimesBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37E938DC4E8A1E59C4FBC81907C5D73B /* Pods-NYTimesBrowser-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3CEE9BDED3CCC334E21A6F8C6893C3F6 /* Pods-NYTimesBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		3D9ABF606882264F219053EDABE808F5 /* Pods-NYTimesBrowserTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowserTests-frameworks.sh"; sourceTree = "<group>"; };
+		456F4E310D4237E78AC4BAA903CC96A6 /* Pods-NYTimesBrowser-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-tvOS-resources.sh"; sourceTree = "<group>"; };
+		48F4150F82BAE1417D04FD86855BB91C /* Pods-NYTimesBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		4B971DBD1E531DB79F082ED9C831E2D2 /* Pods-NYTimesBrowser-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYTimesBrowser-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D4B6726F54D5C185069E7BD2A54EA6D /* Pods-NYTimesBrowserTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYTimesBrowserTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		514B18CCF688D4C9BCF7E40EF31B3A9B /* libPods-NYTimesBrowser-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYTimesBrowser-tvOSTests.a"; path = "libPods-NYTimesBrowser-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		639DB430C279660DAEC590294205B9BF /* Pods-NYTimesBrowser-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYTimesBrowser-acknowledgements.plist"; sourceTree = "<group>"; };
+		697057EB6F6A315777E7EA941A2AAF3B /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
+		6D66CDCFDD7AABF699889058CC6C61D2 /* Pods-NYTimesBrowser-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		7FE63A799CB2B59366F133B6C01EB36B /* Pods-NYTimesBrowser-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYTimesBrowser-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		82F8CDA0C1A195C7D6F21E1DD853F88D /* Pods-NYTimesBrowser-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYTimesBrowser-acknowledgements.markdown"; sourceTree = "<group>"; };
+		83B49A2546BE05C9590B27B1D25088C4 /* Pods-NYTimesBrowser-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-resources.sh"; sourceTree = "<group>"; };
+		83FE2AA4E1025F98BEB49E86353EE816 /* Pods-NYTimesBrowserTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYTimesBrowserTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		840D126F7BE731B1DF2B8F77714C5BDB /* Pods-NYTimesBrowser-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		92ADF544EAD591E1DE30D8E26769A1D7 /* Pods-NYTimesBrowser-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYTimesBrowser-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		943E28460154137D4CF27C96F284F67A /* Pods-NYTimesBrowser-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYTimesBrowser-tvOS-dummy.m"; sourceTree = "<group>"; };
+		9F0343424F4FA78E980FFF80D4E46E73 /* Pods-NYTimesBrowser-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYTimesBrowser-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC1176CC21B9B87FC7CCAA539332C579 /* Pods-NYTimesBrowser-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		D295F7AB2F966ECD92EBF0F03BBE7C4D /* Pods-NYTimesBrowser-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowser-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		F0839BEDBB067A2A110ABC14E6409ED0 /* libPods-NYTimesBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYTimesBrowser.a"; path = "libPods-NYTimesBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3CD2FC5DCB4A3DDD4095E3E1BF8844 /* Pods-NYTimesBrowserTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYTimesBrowserTests-resources.sh"; sourceTree = "<group>"; };
+		FD2F64097314BC740D3BDA204EA57C11 /* Pods-NYTimesBrowser-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYTimesBrowser-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		717E2697E9949E63F2F45721D95596E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		746C9B6189BB9D1DA9900C1DD1877CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A0809064DE2F0E1EB24634EE351F662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1A276487AC4D0BCEC9DBFC01F593198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0416FA3744ECAB6C76E95960896084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				4789B2888C9F3A64D9BB98A64504484B /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+		260E672E181DB8BDAC7A2999772A7AE4 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				8E2C96EA6162ABA11EBE8E8817909062 /* Frameworks */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		2D20FC01AE47C04E62202F456C8DC21D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C0416FA3744ECAB6C76E95960896084 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4789B2888C9F3A64D9BB98A64504484B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E70446C8FBF0852FFA6525C7252B6AB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE098C99B0A52FB64CF9C8FDA1096897 /* Pods-NYTimesBrowser */,
+				5013C3BCA38E13AFEF0B9EF16C0BF9AF /* Pods-NYTimesBrowser-tvOS */,
+				B001CD32680E8AF5B981090E385434B2 /* Pods-NYTimesBrowser-tvOSTests */,
+				803BB26A3172DE75562F67988375C740 /* Pods-NYTimesBrowserTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5013C3BCA38E13AFEF0B9EF16C0BF9AF /* Pods-NYTimesBrowser-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F64097314BC740D3BDA204EA57C11 /* Pods-NYTimesBrowser-tvOS-acknowledgements.markdown */,
+				7FE63A799CB2B59366F133B6C01EB36B /* Pods-NYTimesBrowser-tvOS-acknowledgements.plist */,
+				943E28460154137D4CF27C96F284F67A /* Pods-NYTimesBrowser-tvOS-dummy.m */,
+				D295F7AB2F966ECD92EBF0F03BBE7C4D /* Pods-NYTimesBrowser-tvOS-frameworks.sh */,
+				456F4E310D4237E78AC4BAA903CC96A6 /* Pods-NYTimesBrowser-tvOS-resources.sh */,
+				37E938DC4E8A1E59C4FBC81907C5D73B /* Pods-NYTimesBrowser-tvOS.debug.xcconfig */,
+				6D66CDCFDD7AABF699889058CC6C61D2 /* Pods-NYTimesBrowser-tvOS.release.xcconfig */,
+			);
+			name = "Pods-NYTimesBrowser-tvOS";
+			path = "Target Support Files/Pods-NYTimesBrowser-tvOS";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */,
+				FBCD83CC70225BAAC6A22CCC2E16A681 /* Products */,
+				4E70446C8FBF0852FFA6525C7252B6AB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		803BB26A3172DE75562F67988375C740 /* Pods-NYTimesBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D4B6726F54D5C185069E7BD2A54EA6D /* Pods-NYTimesBrowserTests-acknowledgements.markdown */,
+				83FE2AA4E1025F98BEB49E86353EE816 /* Pods-NYTimesBrowserTests-acknowledgements.plist */,
+				28A6485C4E088DAB1D463579DFDEA1BD /* Pods-NYTimesBrowserTests-dummy.m */,
+				3D9ABF606882264F219053EDABE808F5 /* Pods-NYTimesBrowserTests-frameworks.sh */,
+				FC3CD2FC5DCB4A3DDD4095E3E1BF8844 /* Pods-NYTimesBrowserTests-resources.sh */,
+				36B2606FF9D9C7086D544405519650F3 /* Pods-NYTimesBrowserTests.debug.xcconfig */,
+				18F08888EE5A37A6A88D9699E0621A3F /* Pods-NYTimesBrowserTests.release.xcconfig */,
+			);
+			name = "Pods-NYTimesBrowserTests";
+			path = "Target Support Files/Pods-NYTimesBrowserTests";
+			sourceTree = "<group>";
+		};
+		8E2C96EA6162ABA11EBE8E8817909062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697057EB6F6A315777E7EA941A2AAF3B /* AppCenterAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B001CD32680E8AF5B981090E385434B2 /* Pods-NYTimesBrowser-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				04E5601736D99A79875148105C41A71E /* Pods-NYTimesBrowser-tvOSTests-acknowledgements.markdown */,
+				4B971DBD1E531DB79F082ED9C831E2D2 /* Pods-NYTimesBrowser-tvOSTests-acknowledgements.plist */,
+				92ADF544EAD591E1DE30D8E26769A1D7 /* Pods-NYTimesBrowser-tvOSTests-dummy.m */,
+				1BD43201BD3E57091418A0F0C55DD71D /* Pods-NYTimesBrowser-tvOSTests-frameworks.sh */,
+				AC1176CC21B9B87FC7CCAA539332C579 /* Pods-NYTimesBrowser-tvOSTests-resources.sh */,
+				9F0343424F4FA78E980FFF80D4E46E73 /* Pods-NYTimesBrowser-tvOSTests.debug.xcconfig */,
+				840D126F7BE731B1DF2B8F77714C5BDB /* Pods-NYTimesBrowser-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-NYTimesBrowser-tvOSTests";
+			path = "Target Support Files/Pods-NYTimesBrowser-tvOSTests";
+			sourceTree = "<group>";
+		};
+		B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6F4E16E170AFF42D929EF8FFF92078F /* AppCenter */,
+				FDE42022E7C36FE2A980950DD051F732 /* AppCenterReactNativeShared */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6F4E16E170AFF42D929EF8FFF92078F /* AppCenter */ = {
+			isa = PBXGroup;
+			children = (
+				260E672E181DB8BDAC7A2999772A7AE4 /* Analytics */,
+				2D20FC01AE47C04E62202F456C8DC21D /* Core */,
+				2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */,
+			);
+			name = AppCenter;
+			path = AppCenter;
+			sourceTree = "<group>";
+		};
+		F84ACEF4E4D3666C3A595115D01D3868 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E280B58529AEBA76B5F11C0705D0856 /* AppCenterReactNativeShared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBCD83CC70225BAAC6A22CCC2E16A681 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0839BEDBB067A2A110ABC14E6409ED0 /* libPods-NYTimesBrowser.a */,
+				301EF6E373B8E90E5B55CB3652DCFC76 /* libPods-NYTimesBrowser-tvOS.a */,
+				514B18CCF688D4C9BCF7E40EF31B3A9B /* libPods-NYTimesBrowser-tvOSTests.a */,
+				1DCA78DC12FB6D579B7858B80A07C0C5 /* libPods-NYTimesBrowserTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDE42022E7C36FE2A980950DD051F732 /* AppCenterReactNativeShared */ = {
+			isa = PBXGroup;
+			children = (
+				F84ACEF4E4D3666C3A595115D01D3868 /* Frameworks */,
+			);
+			name = AppCenterReactNativeShared;
+			path = AppCenterReactNativeShared;
+			sourceTree = "<group>";
+		};
+		FE098C99B0A52FB64CF9C8FDA1096897 /* Pods-NYTimesBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				82F8CDA0C1A195C7D6F21E1DD853F88D /* Pods-NYTimesBrowser-acknowledgements.markdown */,
+				639DB430C279660DAEC590294205B9BF /* Pods-NYTimesBrowser-acknowledgements.plist */,
+				0EF483A7B7AFA1258638BCD3CE0CCF18 /* Pods-NYTimesBrowser-dummy.m */,
+				0777C102FCA5518B571FEE648D457CBD /* Pods-NYTimesBrowser-frameworks.sh */,
+				83B49A2546BE05C9590B27B1D25088C4 /* Pods-NYTimesBrowser-resources.sh */,
+				48F4150F82BAE1417D04FD86855BB91C /* Pods-NYTimesBrowser.debug.xcconfig */,
+				3CEE9BDED3CCC334E21A6F8C6893C3F6 /* Pods-NYTimesBrowser.release.xcconfig */,
+			);
+			name = "Pods-NYTimesBrowser";
+			path = "Target Support Files/Pods-NYTimesBrowser";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B18F25951B50946D39D9FE7A44FF858 /* Pods-NYTimesBrowser-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAF1C00D1332DCA65B27CAF9540DB8F1 /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser-tvOSTests" */;
+			buildPhases = (
+				8C1958FD41B909D6FAC106C14FCA4789 /* Sources */,
+				746C9B6189BB9D1DA9900C1DD1877CBB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5375D91090E627E93845468BE9DD4BA2 /* PBXTargetDependency */,
+			);
+			name = "Pods-NYTimesBrowser-tvOSTests";
+			productName = "Pods-NYTimesBrowser-tvOSTests";
+			productReference = 514B18CCF688D4C9BCF7E40EF31B3A9B /* libPods-NYTimesBrowser-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		936D2AE9027FB3687D53B27968538128 /* Pods-NYTimesBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33E03117F022EA25D022193B4289A22B /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser" */;
+			buildPhases = (
+				4C0A5D1CF88FD80E193AB8305C442D5B /* Sources */,
+				8A0809064DE2F0E1EB24634EE351F662 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NYTimesBrowser";
+			productName = "Pods-NYTimesBrowser";
+			productReference = F0839BEDBB067A2A110ABC14E6409ED0 /* libPods-NYTimesBrowser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9F7DF2BFC87AC37A3C5DB8970F7781F0 /* Pods-NYTimesBrowser-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0216DB3DDB6E6E18DEA0F5E01ED538BF /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser-tvOS" */;
+			buildPhases = (
+				04D9421C2D5EE66E60F6A1F426CC4625 /* Sources */,
+				F1A276487AC4D0BCEC9DBFC01F593198 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NYTimesBrowser-tvOS";
+			productName = "Pods-NYTimesBrowser-tvOS";
+			productReference = 301EF6E373B8E90E5B55CB3652DCFC76 /* libPods-NYTimesBrowser-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DC010D76B4018ADB9DE652CD8845E93F /* Pods-NYTimesBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91FC4B31504BEA6B009DA9D2DF90444 /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowserTests" */;
+			buildPhases = (
+				2C5B2067EDC1F94B38D9FF9242484818 /* Sources */,
+				717E2697E9949E63F2F45721D95596E8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8DA717BD3F4565BBC476F0AE128CAC9 /* PBXTargetDependency */,
+			);
+			name = "Pods-NYTimesBrowserTests";
+			productName = "Pods-NYTimesBrowserTests";
+			productReference = 1DCA78DC12FB6D579B7858B80A07C0C5 /* libPods-NYTimesBrowserTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FBCD83CC70225BAAC6A22CCC2E16A681 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				936D2AE9027FB3687D53B27968538128 /* Pods-NYTimesBrowser */,
+				9F7DF2BFC87AC37A3C5DB8970F7781F0 /* Pods-NYTimesBrowser-tvOS */,
+				2B18F25951B50946D39D9FE7A44FF858 /* Pods-NYTimesBrowser-tvOSTests */,
+				DC010D76B4018ADB9DE652CD8845E93F /* Pods-NYTimesBrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04D9421C2D5EE66E60F6A1F426CC4625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B650C12A41587E9A204F3A5965CB8BA5 /* Pods-NYTimesBrowser-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C5B2067EDC1F94B38D9FF9242484818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				428A6D50F8C7C23AFBB2F10FA662DA76 /* Pods-NYTimesBrowserTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0A5D1CF88FD80E193AB8305C442D5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EDBF41FCB1AF2BDDC6F884E5D21ECE /* Pods-NYTimesBrowser-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1958FD41B909D6FAC106C14FCA4789 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E2DE65564EBF887E5D2BDA270E18C83 /* Pods-NYTimesBrowser-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5375D91090E627E93845468BE9DD4BA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NYTimesBrowser-tvOS";
+			target = 9F7DF2BFC87AC37A3C5DB8970F7781F0 /* Pods-NYTimesBrowser-tvOS */;
+			targetProxy = 580EC6C6EF5D825755CC6B0FB4755A8B /* PBXContainerItemProxy */;
+		};
+		A8DA717BD3F4565BBC476F0AE128CAC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NYTimesBrowser";
+			target = 936D2AE9027FB3687D53B27968538128 /* Pods-NYTimesBrowser */;
+			targetProxy = 5CA43441D513717D68C7EE042D253576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BCFCE002B722FF3857D1E2992D23271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E938DC4E8A1E59C4FBC81907C5D73B /* Pods-NYTimesBrowser-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		1EA8CDCA49D5A280A3417B7878BFF5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		4520EAD3F2B0242FF7563BB734F22EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B2606FF9D9C7086D544405519650F3 /* Pods-NYTimesBrowserTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77652B135D61DADB2610F73FD03CFFE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F08888EE5A37A6A88D9699E0621A3F /* Pods-NYTimesBrowserTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78CCF2F8575642B0F9526268F670DF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		85EF92B329326218F5419A9A639BA312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F0343424F4FA78E980FFF80D4E46E73 /* Pods-NYTimesBrowser-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		ADB6135E4F173E9B60E4E8E0CC0889EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEE9BDED3CCC334E21A6F8C6893C3F6 /* Pods-NYTimesBrowser.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B224A9B59A886B9486046CFCA7C6A046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D66CDCFDD7AABF699889058CC6C61D2 /* Pods-NYTimesBrowser-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB7FE60C523FF05A29969F67E8CE86C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 840D126F7BE731B1DF2B8F77714C5BDB /* Pods-NYTimesBrowser-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCCF999AEADC6B707598BCE7DCA7A6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F4150F82BAE1417D04FD86855BB91C /* Pods-NYTimesBrowser.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0216DB3DDB6E6E18DEA0F5E01ED538BF /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BCFCE002B722FF3857D1E2992D23271 /* Debug */,
+				B224A9B59A886B9486046CFCA7C6A046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EA8CDCA49D5A280A3417B7878BFF5DD /* Debug */,
+				78CCF2F8575642B0F9526268F670DF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33E03117F022EA25D022193B4289A22B /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCCF999AEADC6B707598BCE7DCA7A6CA /* Debug */,
+				ADB6135E4F173E9B60E4E8E0CC0889EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAF1C00D1332DCA65B27CAF9540DB8F1 /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowser-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85EF92B329326218F5419A9A639BA312 /* Debug */,
+				CB7FE60C523FF05A29969F67E8CE86C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91FC4B31504BEA6B009DA9D2DF90444 /* Build configuration list for PBXNativeTarget "Pods-NYTimesBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4520EAD3F2B0242FF7563BB734F22EE2 /* Debug */,
+				77652B135D61DADB2610F73FD03CFFE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
