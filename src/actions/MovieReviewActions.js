@@ -1,5 +1,5 @@
 import { FETCH_MOVIE_REVIEWS } from "./types";
-import { API_KEY } from "../../config/API";
+import { API_KEY } from "../config/API";
 
 const path = `https://api.nytimes.com/svc/movies/v2/reviews/picks.json?api-key=${API_KEY}`;
 

@@ -1,5 +1,5 @@
 import { FETCH_TOP_NEWS } from "./types";
-import { API_KEY } from "../../config/API";
+import { API_KEY } from "../config/API";
 
 const path = categoryName =>
   `https://api.nytimes.com/svc/topstories/v2/${categoryName}.json?api-key=${API_KEY}`;
