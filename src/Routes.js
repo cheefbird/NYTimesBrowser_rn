@@ -100,7 +100,7 @@ export default createTabNavigator(
       navigationOptions: {
         tabBarLabel: "Search",
         tabBarIcon: ({ tintColor }) => (
-          <MaterialCommunityIcons name="magnify" size={25} color={tintColor} />
+          <MaterialCommunityIcons name="magnify" size={27} color={tintColor} />
         )
       }
     }
