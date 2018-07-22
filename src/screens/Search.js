@@ -5,6 +5,9 @@ import { DatePicker } from "native-base";
 import SearchCard from "../components/SearchCard";
 
 export default class Search extends Component {
+  static navigationOptions = {
+    title: "Search Articles"
+  };
   render() {
     return (
       <View style={styles.container}>

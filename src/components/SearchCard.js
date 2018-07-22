@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-import { DatePicker } from "native-base";
+import DatePicker from "react-native-datepicker";
 
 export default class SearchCard extends PureComponent {
   render() {
@@ -11,7 +11,7 @@ export default class SearchCard extends PureComponent {
           <TextInput style={styles.searchBar} />
         </View>
         <View>
-          <DatePicker placeHolderText="Start Date" modalTransparent={true} />
+          <DatePicker placeholder="Start Date" />
         </View>
       </View>
     );
