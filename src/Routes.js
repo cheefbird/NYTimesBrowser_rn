@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
+import Search from "./screens/Search";
 
 const TopNewsTab = createStackNavigator(
   {
@@ -48,6 +49,24 @@ const MovieReviewsTab = createStackNavigator(
   }
 );
 
+const SearchTab = createStackNavigator(
+  {
+    SearchScreen: {
+      screen: Search
+    }
+  },
+  {
+    initialRouteName: "SearchScreen",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#000"
+      },
+      headerTintColor: "#fff",
+      headerBackTitle: "Back"
+    }
+  }
+);
+
 export default createTabNavigator(
   {
     TopNewsTab: {
@@ -73,6 +92,15 @@ export default createTabNavigator(
             size={25}
             color={tintColor}
           />
+        )
+      }
+    },
+    SearchTab: {
+      screen: SearchTab,
+      navigationOptions: {
+        tabBarLabel: "Search",
+        tabBarIcon: ({ tintColor }) => (
+          <MaterialCommunityIcons name="magnify" size={27} color={tintColor} />
         )
       }
     }
