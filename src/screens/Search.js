@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-import { DatePicker } from "native-base";
 
 import SearchCard from "../components/SearchCard";
 
@@ -18,6 +17,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: "#000"
+    backgroundColor: "#fff"
   }
 });
