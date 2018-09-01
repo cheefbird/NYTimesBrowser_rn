@@ -26,7 +26,11 @@ export default class SearchCard extends PureComponent {
       <View style={styles.container}>
         <View style={styles.inputContainer}>
           <Text style={styles.prompt}>Search articles by keyword:</Text>
-          <TextInput style={styles.searchBar} />
+          <TextInput
+            placeholder="Search keywords ..."
+            placeholderTextColor={Colors.darkOrange}
+            style={styles.searchBar}
+          />
           <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
           </TouchableOpacity>
