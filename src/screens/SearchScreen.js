@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { searchArticles } from "../actions";
@@ -22,6 +23,11 @@ class SearchScreen extends Component {
     );
   }
 }
+
+SearchScreen.propTypes = {
+  results: PropTypes.array.isRequired,
+  hits: PropTypes.number.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {

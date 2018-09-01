@@ -4,9 +4,9 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
-  Alert
+  TouchableOpacity
 } from "react-native";
+import PropTypes from "prop-types";
 
 import Colors from "../Colors";
 
@@ -43,6 +43,10 @@ export default class SearchCard extends PureComponent {
     );
   }
 }
+
+SearchCard.propTypes = {
+  handler: PropTypes.func.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {
