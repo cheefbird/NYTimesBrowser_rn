@@ -6,6 +6,16 @@ import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
 import Search from "./screens/Search";
+const NavBarStyle = {
+  headerStyle: {
+    backgroundColor: "#000"
+  },
+  headerTintColor: "#db8113",
+  headerBackTitle: "Back",
+  headerTitleStyle: {
+    fontWeight: "bold"
+  }
+};
 
 const TopNewsTab = createStackNavigator(
   {
@@ -18,13 +28,7 @@ const TopNewsTab = createStackNavigator(
   },
   {
     initialRouteName: "TopStories",
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: "#000"
-      },
-      headerTintColor: "#fff",
-      headerBackTitle: "Back"
-    }
+    navigationOptions: { ...NavBarStyle }
   }
 );
 
@@ -39,31 +43,22 @@ const MovieReviewsTab = createStackNavigator(
   },
   {
     initialRouteName: "ReviewList",
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: "#000"
-      },
-      headerTintColor: "#fff",
-      headerBackTitle: "Back"
-    }
+    navigationOptions: { ...NavBarStyle }
   }
 );
 
 const SearchTab = createStackNavigator(
   {
-    SearchScreen: {
-      screen: Search
+    Search: {
+      screen: SearchScreen,
+      navigationOptions: {
+        title: "Article Search"
+      }
     }
   },
   {
-    initialRouteName: "SearchScreen",
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: "#000"
-      },
-      headerTintColor: "#fff",
-      headerBackTitle: "Back"
-    }
+    initialRouteName: "Search",
+    navigationOptions: { ...NavBarStyle }
   }
 );
 
