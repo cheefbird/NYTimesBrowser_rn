@@ -46,7 +46,7 @@ export default class SearchCard extends PureComponent {
             onChangeText={text => this.setState({ searchText: text })}
             value={this.state.searchText}
             enablesReturnKeyAutomatically={true}
-            onSubmitEditing={this.handleSearch}
+            onSubmitEditing={() => this.props.handler(this.state.searchText)}
           />
           <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
