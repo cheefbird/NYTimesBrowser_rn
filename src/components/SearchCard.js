@@ -40,8 +40,13 @@ export default class SearchCard extends PureComponent {
             placeholder="Search keywords ..."
             placeholderTextColor={Colors.darkOrange}
             style={styles.searchBar}
+            clearTextOnFocus={true}
+            keyboardAppearance="dark"
+            returnKeyType="search"
             onChangeText={text => this.setState({ searchText: text })}
             value={this.state.searchText}
+            enablesReturnKeyAutomatically={true}
+            onSubmitEditing={this.handleSearch}
           />
           <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
