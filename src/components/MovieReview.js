@@ -27,6 +27,15 @@ export default function MovieReview({
   );
 }
 
+MovieReview.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  labelTitle: PropTypes.string.isRequired,
+  labelRating: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+  imageUri: PropTypes.string.isRequired
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
