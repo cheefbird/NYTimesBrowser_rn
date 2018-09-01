@@ -16,20 +16,7 @@ export default class SearchCard extends PureComponent {
     this.state = { searchText: "" };
   }
 
-  handleSearch = () => {
-    const message =
-      this.state.searchText.length > 0
-        ? `You searched for "${this.state.searchText}"`
-        : "You didn't enter any search terms.";
-
-    Alert.alert("Search Tapped", message, [
-      {
-        text: "Dismiss",
-        onPress: () => console.log("Cancel Pressed"),
-        style: "cancel"
-      }
-    ]);
-  };
+  handleSearch = () => this.props.handler(this.state.searchText);
 
   render() {
     return (
@@ -46,7 +33,7 @@ export default class SearchCard extends PureComponent {
             onChangeText={text => this.setState({ searchText: text })}
             value={this.state.searchText}
             enablesReturnKeyAutomatically={true}
-            onSubmitEditing={() => this.props.handler(this.state.searchText)}
+            onSubmitEditing={this.handleSearch}
           />
           <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
