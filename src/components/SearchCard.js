@@ -11,6 +11,11 @@ import {
 import Colors from "../Colors";
 
 export default class SearchCard extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { searchText: "" };
+  }
+
   handleSearch = () => {
     Alert.alert("Search Tapped", "You tapped the Search button!", [
       {
@@ -30,6 +35,8 @@ export default class SearchCard extends PureComponent {
             placeholder="Search keywords ..."
             placeholderTextColor={Colors.darkOrange}
             style={styles.searchBar}
+            onChangeText={text => this.setState({ searchText: text })}
+            value={this.state.searchText}
           />
           <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
