@@ -6,12 +6,13 @@ import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
 import SearchScreen from "./screens/SearchScreen";
+import Colors from "./Colors";
 
 const NavBarStyle = {
   headerStyle: {
     backgroundColor: "#000"
   },
-  headerTintColor: "#db8113",
+  headerTintColor: Colors.orange,
   headerBackTitle: "Back",
   headerTitleStyle: {
     fontWeight: "bold"
