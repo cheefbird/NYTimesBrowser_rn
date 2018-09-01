@@ -1,5 +1,8 @@
 import React from "react";
-import { createStackNavigator, createTabNavigator } from "react-navigation";
+import {
+  createStackNavigator,
+  createBottomTabNavigator
+} from "react-navigation";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import TopNews from "./screens/TopNews";
@@ -64,7 +67,7 @@ const SearchTab = createStackNavigator(
   }
 );
 
-export default createTabNavigator(
+export default createBottomTabNavigator(
   {
     TopNewsTab: {
       screen: TopNewsTab,
