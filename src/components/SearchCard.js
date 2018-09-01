@@ -4,19 +4,30 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from "react-native";
 
 import Colors from "../Colors";
 
 export default class SearchCard extends PureComponent {
+  handleSearch = () => {
+    Alert.alert("Search Tapped", "You tapped the Search button!", [
+      {
+        text: "Dismiss",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel"
+      }
+    ]);
+  };
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.inputContainer}>
           <Text style={styles.prompt}>Search articles by keyword:</Text>
           <TextInput style={styles.searchBar} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={this.handleSearch}>
             <Text style={styles.buttonText}>Search</Text>
           </TouchableOpacity>
         </View>
