@@ -17,7 +17,12 @@ export default class SearchCard extends PureComponent {
   }
 
   handleSearch = () => {
-    Alert.alert("Search Tapped", "You tapped the Search button!", [
+    const message =
+      this.state.searchText.length > 0
+        ? `You searched for "${this.state.searchText}"`
+        : "You didn't enter any search terms.";
+
+    Alert.alert("Search Tapped", message, [
       {
         text: "Dismiss",
         onPress: () => console.log("Cancel Pressed"),
