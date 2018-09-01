@@ -7,6 +7,8 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import Colors from "../Colors";
+
 export default class SearchCard extends PureComponent {
   render() {
     return (
@@ -37,20 +39,20 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 5,
-    color: "#db8113"
+    color: Colors.orange
   },
   searchBar: {
-    borderColor: "#db8113",
+    borderColor: Colors.orange,
     borderWidth: 2,
     borderRadius: 10,
     marginBottom: 20,
     fontSize: 19,
     paddingHorizontal: 15,
     paddingVertical: 10,
-    color: "#db8113"
+    color: Colors.orange
   },
   button: {
-    backgroundColor: "#db8113",
+    backgroundColor: Colors.orange,
     color: "#000",
     paddingHorizontal: 25,
     paddingVertical: 8,
