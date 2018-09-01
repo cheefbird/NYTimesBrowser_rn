@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TextInput } from "react-native";
 
 import SearchCard from "../components/SearchCard";
 
-export default class Search extends Component {
+export default class SearchScreen extends Component {
   render() {
     return (
       <View style={styles.container}>

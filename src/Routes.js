@@ -5,7 +5,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
-import Search from "./screens/Search";
+import SearchScreen from "./screens/SearchScreen";
+
 const NavBarStyle = {
   headerStyle: {
     backgroundColor: "#000"
