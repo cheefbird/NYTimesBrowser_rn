@@ -5,6 +5,19 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import TopNews from "./screens/TopNews";
 import Article from "./screens/Article";
 import MovieReviews from "./screens/MovieReviews";
+import SearchScreen from "./screens/SearchScreen";
+import Colors from "./Colors";
+
+const NavBarStyle = {
+  headerStyle: {
+    backgroundColor: "#000"
+  },
+  headerTintColor: Colors.orange,
+  headerBackTitle: "Back",
+  headerTitleStyle: {
+    fontWeight: "bold"
+  }
+};
 
 const TopNewsTab = createStackNavigator(
   {
@@ -17,13 +30,7 @@ const TopNewsTab = createStackNavigator(
   },
   {
     initialRouteName: "TopStories",
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: "#000"
-      },
-      headerTintColor: "#fff",
-      headerBackTitle: "Back"
-    }
+    navigationOptions: { ...NavBarStyle }
   }
 );
 
@@ -38,13 +45,22 @@ const MovieReviewsTab = createStackNavigator(
   },
   {
     initialRouteName: "ReviewList",
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: "#000"
-      },
-      headerTintColor: "#fff",
-      headerBackTitle: "Back"
+    navigationOptions: { ...NavBarStyle }
+  }
+);
+
+const SearchTab = createStackNavigator(
+  {
+    Search: {
+      screen: SearchScreen,
+      navigationOptions: {
+        title: "Article Search"
+      }
     }
+  },
+  {
+    initialRouteName: "Search",
+    navigationOptions: { ...NavBarStyle }
   }
 );
 
@@ -75,12 +91,21 @@ export default createTabNavigator(
           />
         )
       }
+    },
+    SearchTab: {
+      screen: SearchTab,
+      navigationOptions: {
+        tabBarLabel: "Search",
+        tabBarIcon: ({ tintColor }) => (
+          <MaterialCommunityIcons name="magnify" size={27} color={tintColor} />
+        )
+      }
     }
   },
   {
     initialRouteName: "TopNewsTab",
     tabBarOptions: {
-      activeTintColor: "#db8113",
+      activeTintColor: Colors.orange,
       inactiveTintColor: "#fff",
       style: {
         backgroundColor: "#000"
