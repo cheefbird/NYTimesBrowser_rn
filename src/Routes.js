@@ -105,7 +105,7 @@ export default createTabNavigator(
   {
     initialRouteName: "TopNewsTab",
     tabBarOptions: {
-      activeTintColor: "#db8113",
+      activeTintColor: Colors.orange,
       inactiveTintColor: "#fff",
       style: {
         backgroundColor: "#000"
