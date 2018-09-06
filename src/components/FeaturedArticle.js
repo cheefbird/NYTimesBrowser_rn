@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
 
+import Colors from "../Colors";
+
 export default function StandardArticle({
   title,
   subtitle,
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "space-between",
     alignItems: "center",
-    borderBottomColor: "#d8d8d8",
+    borderBottomColor: Colors.darkGrey,
     borderBottomWidth: 1,
     padding: 8
   },
@@ -50,8 +52,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontStyle: "italic",
     fontWeight: "bold",
-    color: "#fff",
-    backgroundColor: "#000",
+    color: Colors.white,
+    backgroundColor: Colors.black,
     alignSelf: "flex-start",
     paddingHorizontal: 5,
     paddingVertical: 4,

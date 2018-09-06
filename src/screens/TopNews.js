@@ -7,6 +7,7 @@ import { fetchTopNews } from "../actions";
 import StandardArticle from "../components/StandardArticle";
 import FeaturedArticle from "../components/FeaturedArticle";
 import CategoryPickerItem from "../components/CategoryPickerItem";
+import Colors from "../Colors";
 
 class TopNews extends PureComponent {
   static navigationOptions = {
@@ -109,7 +110,7 @@ class TopNews extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#000" />
+        <StatusBar barStyle="light-content" backgroundColor={Colors.black} />
         <FlatList
           data={this.props.topNewsArticles}
           keyExtractor={this.keyExtractor}
@@ -124,10 +125,10 @@ class TopNews extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: Colors.white
   },
   listItem: {
-    borderBottomColor: "#fcfcfc",
+    borderBottomColor: Colors.grey,
     borderBottomWidth: 1,
     flex: 1,
     padding: 8
@@ -137,7 +138,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    borderBottomColor: "#d8d8d8",
+    borderBottomColor: Colors.darkGrey,
     borderBottomWidth: 1
   },
   categoryPickerLabel: {

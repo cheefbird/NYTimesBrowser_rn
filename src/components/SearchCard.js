@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 3,
     alignSelf: "center",
-    backgroundColor: "#000"
+    backgroundColor: Colors.black
   },
   inputContainer: {
     padding: 8
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: Colors.orange,
-    color: "#000",
+    color: Colors.black,
     paddingHorizontal: 25,
     paddingVertical: 8,
     borderRadius: 15,

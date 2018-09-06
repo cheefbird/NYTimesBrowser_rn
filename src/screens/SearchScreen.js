@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 
 import { searchArticles } from "../actions";
 import SearchCard from "../components/SearchCard";
+import Colors from "../Colors";
 
 class SearchScreen extends Component {
   resultText = count => `${count} results found!`;
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: "#fff"
+    backgroundColor: Colors.white
   }
 });
 

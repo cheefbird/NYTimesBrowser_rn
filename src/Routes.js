@@ -13,7 +13,7 @@ import Colors from "./Colors";
 
 const NavBarStyle = {
   headerStyle: {
-    backgroundColor: "#000"
+    backgroundColor: Colors.black
   },
   headerTintColor: Colors.orange,
   headerBackTitle: "Back",
@@ -109,9 +109,9 @@ export default createBottomTabNavigator(
     initialRouteName: "TopNewsTab",
     tabBarOptions: {
       activeTintColor: Colors.orange,
-      inactiveTintColor: "#fff",
+      inactiveTintColor: Colors.white,
       style: {
-        backgroundColor: "#000"
+        backgroundColor: Colors.black
       }
     }
   }

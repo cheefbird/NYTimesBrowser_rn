@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { fetchMovieReviews } from "../actions";
-// import StandardArticle from "../components/StandardArticle";
 import MovieReview from "../components/MovieReview";
+import Colors from "../Colors";
 
 class MovieReviews extends PureComponent {
   static navigationOptions = {
@@ -74,7 +74,7 @@ class MovieReviews extends PureComponent {
 const styles = StyleSheet.create({
   list: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: Colors.white
   }
 });
 

@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
 
+import Colors from "../Colors";
+
 export default function MovieReview({
   title,
   subtitle,
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderBottomColor: "#d8d8d8",
+    borderBottomColor: Colors.darkGrey,
     borderBottomWidth: 1,
     padding: 8
   },
@@ -57,13 +59,13 @@ const styles = StyleSheet.create({
   labelContainer: {
     flexDirection: "row",
     fontSize: 12,
-    backgroundColor: "#000",
+    backgroundColor: Colors.black,
     alignSelf: "flex-start",
     paddingHorizontal: 5,
     paddingVertical: 4
   },
   labelTitle: {
-    color: "#fff",
+    color: Colors.white,
     fontWeight: "bold"
   },
   labelRating: {
