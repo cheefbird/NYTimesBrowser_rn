@@ -2,6 +2,9 @@
 config/*
 helper/
 
+# cocoapods
+ios/Pods/
+
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # expo
