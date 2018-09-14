@@ -6,3 +6,6 @@ export const FETCH_MOVIE_REVIEWS = "fetch_movie_reviews";
 
 // Fetch search results
 export const FETCH_SEARCH_RESULTS = "fetch_search_results";
+
+// User initiated a search
+export const SEARCH_STARTED = "search_started";

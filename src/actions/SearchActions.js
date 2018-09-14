@@ -1,4 +1,4 @@
-import { FETCH_SEARCH_RESULTS } from "./types";
+import { FETCH_SEARCH_RESULTS, SEARCH_STARTED } from "./types";
 import { API_KEY } from "../config/API";
 
 const path = searchText =>
@@ -20,3 +20,10 @@ export const searchArticles = searchText => {
       });
   };
 };
+
+export function searchStarted() {
+  return {
+    type: SEARCH_STARTED,
+    payload: { isSearching: true }
+  };
+}
