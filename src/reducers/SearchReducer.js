@@ -1,4 +1,4 @@
-import { FETCH_SEARCH_RESULTS } from "../actions/types";
+import { FETCH_SEARCH_RESULTS, SEARCH_STARTED } from "../actions/types";
 
 const INITIAL_STATE = {
   isSearching: false,
@@ -13,6 +13,12 @@ export default (state = INITIAL_STATE, action) => {
     case FETCH_SEARCH_RESULTS:
       return {
         isSearching: false,
+        ...action.payload
+      };
+
+    case SEARCH_STARTED:
+      return {
+        ...state,
         ...action.payload
       };
 

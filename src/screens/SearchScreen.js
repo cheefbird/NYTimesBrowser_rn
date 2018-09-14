@@ -4,14 +4,17 @@ import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import { searchArticles } from "../actions";
+import { searchArticles, searchStarted } from "../actions";
 import SearchCard from "../components/SearchCard";
 import Colors from "../Colors";
 
 class SearchScreen extends Component {
   resultText = count => `${count} results found!`;
 
-  search = query => this.props.searchArticles(query);
+  search = query => {
+    this.props.searchStarted();
+    this.props.searchArticles(query);
+  };
 
   render() {
     const { results, hits } = this.props;
@@ -50,5 +53,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { searchArticles }
+  { searchArticles, searchStarted }
 )(SearchScreen);
