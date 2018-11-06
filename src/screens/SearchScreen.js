@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
@@ -17,12 +17,17 @@ class SearchScreen extends Component {
   };
 
   render() {
-    const { results, hits } = this.props;
+    const { results, hits, isSearching } = this.props;
 
     return (
       <View style={styles.container}>
-        <SearchCard handler={this.search} />
-        {hits > 0 ? <Text>{this.resultText(hits)}</Text> : null}
+        {isSearching ? (
+          <View style={styles.spinner}>
+            <ActivityIndicator size="large" color={Colors.darkOrange} />
+          </View>
+        ) : (
+          <SearchCard handler={this.search} />
+        )}
       </View>
     );
   }
@@ -38,6 +43,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     backgroundColor: Colors.white
+  },
+  spinner: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 
@@ -48,7 +58,9 @@ const mapStateToProps = state => {
 
   const { hits } = state.searchResults.meta;
 
-  return { results, hits };
+  const { isSearching } = state.searchResults;
+
+  return { results, hits, isSearching };
 };
 
 export default connect(
